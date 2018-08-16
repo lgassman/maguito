@@ -5,11 +5,15 @@
 <body>
 	<form id="ajaxForm" method="get" wicket:id="form">
 		<fieldset>
-			Search: <input type="text" wicket:id="search" size="50" /> <input
+			Search: <input type="text" wicket:id="search" size="50" /> 
+			<input
 				type="button" wicket:id="action" size="50" value="Search" /><br /> <br />
 			<span wicket:id="message" size="50" /> <br />
-			Nombre: <span wicket:id="result.nombre" size="50" /> <br /> Vida :<span
-				wicket:id="result.vida" size="50"></span><br />
+			Nombre: <input type="text" wicket:id="result.nombre" size="50" /> <br /> 
+			Vida :<input type="text" wicket:id="result.vida" size="50" /><br />
+			Experiencia :<input type="text" wicket:id="result.experiencia" size="50" /><br />
+			<input
+				type="button" wicket:id="update" size="50" value="Update" /><br /> <br />
 
 		<br />
 		<table>

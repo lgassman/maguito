@@ -53,4 +53,8 @@ public class SearchModel<T> implements Serializable {
 		this.message = message;
 	}
 
+	public void update() {
+		this.home.update(this.getResult());
+	}
+
 }

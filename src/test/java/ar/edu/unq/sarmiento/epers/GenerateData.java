@@ -25,14 +25,17 @@ public class GenerateData {
 			Maguito harry = new Maguito("Harry", 100);
 			harry.addItem(new Item("varita", 1));
 			harry.addItem(new Item("capa", 3));
+			harry.setExperiencia(10);
 
 			Maguito gandalf = new Maguito("Gandalf", 90);
 			gandalf.addItem(new Item("baculo", 7));
 			gandalf.addItem(new Item("sombrero", 2));
-
+			gandalf.setExperiencia(200);
+			
 			MaguitoHome.getInstance().insert(harry);
 			MaguitoHome.getInstance().insert(gandalf);
 
+			
 			transaction.commit();
 		} catch (RuntimeException e) {
 			transaction.rollback();

@@ -22,7 +22,8 @@ public class SessionFactoryContainer {
 	}
 
 	public synchronized static void buildSessionFactory(boolean generateSchema) {
-		final StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
+		final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
+				.configure().build();
 
 		try {
 			Metadata metadata = new MetadataSources(registry).buildMetadata();

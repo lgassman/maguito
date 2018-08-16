@@ -13,6 +13,7 @@ public class Maguito extends Persistible {
 	private static final long serialVersionUID = -786414214144659508L;
 	private String nombre = "";
 	private int vida = 0;
+	private int experiencia;
 	
 	@OneToMany(mappedBy = "maguito",  cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Item> items = new ArrayList<Item>();
@@ -68,5 +69,13 @@ public class Maguito extends Persistible {
 	
 	public int peso() {
 		return this.getItems().stream().map((item) -> item.getPeso()).reduce( (a,b) -> a + b).orElse(0) ; 
+	}
+
+	public int getExperiencia() {
+		return experiencia;
+	}
+
+	public void setExperiencia(int experiencia) {
+		this.experiencia = experiencia;
 	}
 }

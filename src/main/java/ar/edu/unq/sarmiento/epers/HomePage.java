@@ -35,9 +35,9 @@ public class HomePage extends WebPage {
 
 		form.add(new Label("message"));
 
-		form.add(new Label("result.nombre"));
-		form.add(new Label("result.vida"));
-		
+		form.add(new TextField("result.nombre"));
+		form.add(new TextField("result.vida"));
+		form.add(new TextField("result.experiencia"));
 		
 
 	    PropertyListView<Item> items = new PropertyListView<Item>("result.items") {
@@ -64,8 +64,24 @@ public class HomePage extends WebPage {
 			}
 
 		};
-
 		form.add(ab);
+
+		ab = new AjaxButton("update") {
+			@Override
+			protected void onSubmit(AjaxRequestTarget target) {
+
+				if (target != null) {
+					model.getObject().update();
+					target.add(form);
+				}
+
+			}
+
+		};
+		
+		form.add(ab);
+		
+		
 		add(form);
 
 	}
