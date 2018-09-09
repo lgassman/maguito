@@ -12,8 +12,8 @@ import org.hibernate.annotations.GenericGenerator;
 public class Persistible implements Serializable {
 
 	@Id
-	@GeneratedValue(generator="increment")
-	@GenericGenerator(name="increment", strategy = "increment")
+	@GeneratedValue(generator="myGenerator")
+	@GenericGenerator(name="myGenerator", strategy = "increment")
 	private int id;
 	
 	public int getId() {

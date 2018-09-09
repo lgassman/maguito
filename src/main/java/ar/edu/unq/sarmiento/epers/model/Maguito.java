@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -15,7 +16,7 @@ public class Maguito extends Persistible {
 	private int vida = 0;
 	private int experiencia;
 	
-	@OneToMany(mappedBy = "maguito",  cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "maguito",  cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
 	private List<Item> items = new ArrayList<Item>();
 
 	public Maguito() {
