@@ -1,10 +1,8 @@
-package ar.edu.unq.sarmiento.epers;
+package ar.edu.unq.sarmiento.epers.hibernate;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import ar.edu.unq.sarmiento.epers.hibernate.MaguitoHome;
-import ar.edu.unq.sarmiento.epers.hibernate.SessionFactoryContainer;
 import ar.edu.unq.sarmiento.epers.model.Item;
 import ar.edu.unq.sarmiento.epers.model.Maguito;
 
