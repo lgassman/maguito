@@ -8,6 +8,7 @@ import ar.edu.unq.sarmiento.epers.model.Maguito;
 
 public class MaguitoRandomHome implements Home<Maguito>{
 
+	private static final long serialVersionUID = 5914747011225145115L;
 	static MaguitoRandomHome instance = new MaguitoRandomHome();
 	
 	@Override

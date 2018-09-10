@@ -1,7 +1,5 @@
 package ar.edu.unq.sarmiento.epers.hibernate;
 
-import javax.persistence.NoResultException;
-
 import org.hibernate.Session;
 
 import ar.edu.unq.sarmiento.epers.model.Home;

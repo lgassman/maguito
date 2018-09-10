@@ -9,7 +9,9 @@ import javax.persistence.MappedSuperclass;
 import org.hibernate.annotations.GenericGenerator;
 
 @MappedSuperclass
-public class Persistible implements Serializable {
+public abstract class Persistible implements Serializable {
+
+	private static final long serialVersionUID = 8800435793805290981L;
 
 	@Id
 	@GeneratedValue(generator="myGenerator")

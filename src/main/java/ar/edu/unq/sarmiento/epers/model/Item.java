@@ -6,6 +6,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Item extends Persistible{
 
+	private static final long serialVersionUID = 7580495859264340032L;
 	private String nombre;
 	private int peso;
 	
