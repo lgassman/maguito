@@ -2,6 +2,10 @@ package ar.edu.unq.sarmiento.epers;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import ar.edu.unq.sarmiento.epers.hibernate.HibernateConf;
 
 /**
  * Application object for your web application.
@@ -27,7 +31,12 @@ public class WicketApplication extends WebApplication
 	public void init()
 	{
 		super.init();
+		HibernateConf.modo = "update"; // Esto lo hago para que al crearse el contexto no vuelva a crear la bd
 
-		// add your configuration here
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+		ctx.scan("ar.edu.unq.sarmiento.epers", "ar.edu.unq.sarmiento.epers.hibernate");
+		ctx.refresh();
+		
+		getComponentInstantiationListeners().add(new SpringComponentInjector(this, ctx));
 	}
 }

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.NoResultException;
 
-public class SearchModel<T> implements Serializable {
+public class SearchModel<T extends Maguito> implements Serializable {
 
 	private static final long serialVersionUID = 2280350615761032908L;
 	private String search = "";

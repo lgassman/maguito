@@ -16,7 +16,7 @@ public class Maguito extends Persistible {
 	private int vida = 0;
 	private int experiencia;
 	
-	@OneToMany(mappedBy = "maguito",  cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "maguito",  cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
 	private List<Item> items = new ArrayList<Item>();
 
 	public Maguito() {
