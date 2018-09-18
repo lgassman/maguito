@@ -33,10 +33,12 @@ public class WicketApplication extends WebApplication
 		super.init();
 		HibernateConf.modo = "update"; // Esto lo hago para que al crearse el contexto no vuelva a crear la bd
 
+		// Acá se crea el contexto de Spring configurado con Annotations
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
 		ctx.scan("ar.edu.unq.sarmiento.epers", "ar.edu.unq.sarmiento.epers.hibernate");
 		ctx.refresh();
 		
+		// Acá se integra Wicket con Spring
 		getComponentInstantiationListeners().add(new SpringComponentInjector(this, ctx));
 	}
 }
