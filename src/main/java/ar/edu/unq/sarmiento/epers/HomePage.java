@@ -11,8 +11,9 @@ import org.apache.wicket.markup.html.list.PropertyListView;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
+import org.springframework.context.ApplicationContext;
 
-import ar.edu.unq.sarmiento.epers.model.Home;
+import ar.edu.unq.sarmiento.epers.home.Home;
 import ar.edu.unq.sarmiento.epers.model.Item;
 import ar.edu.unq.sarmiento.epers.model.Maguito;
 import ar.edu.unq.sarmiento.epers.model.SearchModel;

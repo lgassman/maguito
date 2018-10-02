@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import ar.edu.unq.sarmiento.epers.model.Home;
+import ar.edu.unq.sarmiento.epers.home.Home;
 import ar.edu.unq.sarmiento.epers.model.Item;
 import ar.edu.unq.sarmiento.epers.model.Maguito;
 
@@ -26,7 +26,7 @@ public class DataGenerator {
 		gandalf.addItem(new Item("sombrero", 2));
 		gandalf.setExperiencia(200);
 
-		maguitoHome.insert(harry);
-		maguitoHome.insert(gandalf);
+		maguitoHome.saveOrUpdate(harry);
+		maguitoHome.saveOrUpdate(gandalf);
 	}
 }
