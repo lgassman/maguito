@@ -15,6 +15,8 @@ public class MaguitoHome extends AbstractHome<Maguito> {
 	public Maguito findByName(String name) {
 		return this.getSession().createQuery("FROM Maguito WHERE nombre = :name", Maguito.class)
 				.setParameter("name", name).getSingleResult();
+		
+
 	}
 
 }

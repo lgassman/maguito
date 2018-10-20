@@ -11,7 +11,7 @@ import ar.edu.unq.sarmiento.epers.hibernate.HibernateConf;
  * Application object for your web application.
  * If you want to run this application without deploying, run the Start class.
  * 
- * @see ar.edu.unq.sarmiento.epers.Start#main(String[])
+ * @see ar.edu.unq.sarmiento.epers.ar.edu.unq.sarmiento.Start#main(String[])
  */
 public class WicketApplication extends WebApplication
 {

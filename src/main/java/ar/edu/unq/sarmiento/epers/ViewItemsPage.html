@@ -1,0 +1,28 @@
+<html xmlns:wicket>
+<head>
+<title>Wicket Ajax Example</title>
+</head>
+<body>
+	<form id="ajaxForm" method="get" wicket:id="form">
+		<fieldset>
+			Nombre: <span wicket:id="nombre" size="50" /> <br /> 
+			Vida :<span  wicket:id="vida" size="50" /><br />
+			Experiencia :<span wicket:id="experiencia" size="50" /><br />
+
+		<br />
+		<table>
+			<tr>
+				<th>Item</th>
+				<th>Peso</th>
+			</tr>
+			<tr wicket:id="items">
+				<td><span wicket:id="nombre">nombre</span></td>
+				<td><span wicket:id="peso">0</span></td>
+			</tr>
+		</table>
+		</fieldset>
+	</form>
+			<input
+				type="button" wicket:id="volver" size="50" value="Volver" /><br /> <br />
+</body>
+</html>
