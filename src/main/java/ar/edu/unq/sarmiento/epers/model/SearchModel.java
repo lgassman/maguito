@@ -27,6 +27,7 @@ public class SearchModel<T extends Persistible> implements Serializable {
 	}
 
 	public T getResult() {
+		this.home.attach(result);
 		return result;
 	}
 

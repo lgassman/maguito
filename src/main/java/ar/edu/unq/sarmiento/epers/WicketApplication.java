@@ -4,6 +4,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import ar.edu.unq.sarmiento.epers.hibernate.HibernateConf;
 
@@ -31,14 +32,7 @@ public class WicketApplication extends WebApplication
 	public void init()
 	{
 		super.init();
-		HibernateConf.modo = "update"; // Esto lo hago para que al crearse el contexto no vuelva a crear la bd
-
-		// Acá se crea el contexto de Spring configurado con Annotations
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-		ctx.scan("ar.edu.unq.sarmiento.epers", "ar.edu.unq.sarmiento.epers.hibernate");
-		ctx.refresh();
-		
 		// Acá se integra Wicket con Spring
-		getComponentInstantiationListeners().add(new SpringComponentInjector(this, ctx));
+		getComponentInstantiationListeners().add(new SpringComponentInjector(this));
 	}
 }

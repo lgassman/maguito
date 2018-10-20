@@ -19,7 +19,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages = "ar.edu.unq.sarmiento.epers")
 @EnableTransactionManagement
 public class HibernateConf {
-	public static String modo = "create";
+	//create or update
+	public static String modo = "update";
 
 	@Bean
 	public LocalSessionFactoryBean sessionFactory() {

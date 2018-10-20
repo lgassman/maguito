@@ -82,6 +82,7 @@ public class HomePage extends WebPage {
 		Link<?> l = new Link<SearchModel<Maguito>>("details") {
 			public void onClick()
 			 {
+				
 			    setResponsePage(new ViewItemsPage(((SearchModel<Maguito>)HomePage.this.getDefaultModelObject()).getResult()));
 			 }
 		};
