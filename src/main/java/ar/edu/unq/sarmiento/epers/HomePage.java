@@ -60,7 +60,6 @@ public class HomePage extends WebPage {
 				log.debug("Search button pressed");
 				if (target != null) {
 					model.getObject().find();
-
 					target.add(form);
 				}
 			}
@@ -80,10 +79,10 @@ public class HomePage extends WebPage {
 		};
 		form.add(ab);
 		
-		Link<SearchModel<Maguito>> l = new Link<SearchModel<Maguito>>("details", new Model<SearchModel<Maguito>>((SearchModel<Maguito>)this.getDefaultModelObject())) {
+		Link<?> l = new Link<SearchModel<Maguito>>("details") {
 			public void onClick()
 			 {
-			    setResponsePage(new ViewItemsPage(getModelObject().getResult()));
+			    setResponsePage(new ViewItemsPage(((SearchModel<Maguito>)HomePage.this.getDefaultModelObject()).getResult()));
 			 }
 		};
 		
